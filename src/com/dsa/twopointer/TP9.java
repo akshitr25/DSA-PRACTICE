@@ -1,10 +1,10 @@
-package com.dsa.slidingwindow;
+package com.dsa.twopointer;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SW9 {
+public class TP9 {
 	public static void main(String as[])
 	{ //FIND NO OF PAIRS WITH SUM<=K
 		int n=10,k=7,count=0,sum=0;  

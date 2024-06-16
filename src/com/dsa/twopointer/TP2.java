@@ -1,9 +1,9 @@
-package com.dsa.slidingwindow;
+package com.dsa.twopointer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SW2 {
+public class TP2 {
 	public static void main(String as[])
 	{
 		int a[] = new int[]{-10,-4,1,2,10};

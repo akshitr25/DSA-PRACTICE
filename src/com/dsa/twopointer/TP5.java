@@ -1,8 +1,8 @@
-package com.dsa.slidingwindow;
+package com.dsa.twopointer;
 
 import java.util.Arrays;
 
-public class SW5 {
+public class TP5 {
 	public static void main(String as[])
 	{ //PAIRS WITH SUM<=K
 		int n=3,k=2,count=0,i=0,j=0; 

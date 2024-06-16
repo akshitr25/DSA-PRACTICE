@@ -1,6 +1,6 @@
-package com.dsa.slidingwindow;
+package com.dsa.twopointer;
 
-public class SW3 {
+public class TP3 {
 	public static void main(String as[])
 	{ //SUBARRAYS WITH SUM<=K
 		int n=15,k=4; 

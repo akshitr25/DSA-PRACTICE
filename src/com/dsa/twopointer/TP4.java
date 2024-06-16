@@ -1,9 +1,9 @@
-package com.dsa.slidingwindow;
+package com.dsa.twopointer;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class SW4 {
+public class TP4 {
 	public static void main(String as[])
 	{ //SUBARRAYS WITH DISTINCT NO. COUNT<=K
 		int n=15,k=4; 

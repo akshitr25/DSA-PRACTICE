@@ -1,9 +1,9 @@
-package com.dsa.slidingwindow;
+package com.dsa.twopointer;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class SW8 {
+public class TP8 {
 	public static void main(String as[])
 	{ //FIND LONGEST SUBARRAY WHICH HAS DISTINCT NUMBERS (OPTIMAL)
 		int n=10,maxlen=0,i=0,j=0;  
