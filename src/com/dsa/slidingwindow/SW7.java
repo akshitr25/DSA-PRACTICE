@@ -1,8 +1,5 @@
 package com.dsa.slidingwindow;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class SW7 {
 	public static void main(String as[])
 	{
