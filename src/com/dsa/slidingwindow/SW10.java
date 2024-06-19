@@ -4,33 +4,23 @@ public class SW10 {
 	public static void main(String as[])
 	{
 //		COUNT NO OF SUBARRAYS W SUM==K
-//		OPTIMAL TC:O(), SC:O()
-		int a[]= {1,11,2,3,15};
-		int k=1;
+//		OPTIMAL TC:O(N), SC:O(1)
+		int a[]={1,10,2,3,7,15,10};
+		int k=10;
 		System.out.println(subarraysWithSumK(a,k));
 	}
 	public static int subarraysWithSumK(int a[],int k)
 	{
-		int count=0,i=0,j=0,n=a.length,sum=0;
-		while(j<n) 
+		int count=0,start=0,end=0,n=a.length,sum=0;
+		for(end=0;end<n;end++)
 		{
-			sum+=a[j];
-			if(sum<=k)
+			sum+=a[end];
+			while(sum>k && start<=end)
 			{
-				count+=j-i+1;
-				j++;
+				sum-=a[start];
+				start++;
 			}
-			else if(sum>k)
-			{
-				while(sum>k && i<=j) //can we use if instead of while?
-				{
-					sum-=a[i];
-					i++;
-				}
-				if(sum<=k && sum!=0)
-					count+=j-i+1;
-				j++;
-			}
+			if(sum==k)	count++;
 		}
 		return count;
 	}
