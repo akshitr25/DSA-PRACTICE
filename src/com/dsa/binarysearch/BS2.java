@@ -3,7 +3,7 @@ package com.dsa.binarysearch;
 public class BS2 {
 	public static void main(String as[])
 	{
-		//FIND INDEX OF NUM IN ARRAY WHICH IS JUST GREATER THAN GIVEN NUMBER X AND AS CLOSE AS POSSIBLE TO X.
+		// UPPER BOUND: FIND INDEX OF NUM IN ARRAY WHICH IS JUST GREATER THAN GIVEN NUMBER X AND AS CLOSE AS POSSIBLE TO X.
 		//TC: O(logN) SC: O(1)
 		int a[]= {1,3,5,6,6,7,7,9},target=6;
 		int n=a.length-1;
