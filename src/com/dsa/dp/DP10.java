@@ -17,7 +17,6 @@ public class DP10 {
 		//................
 		//if we dont know at each step that this option will give best answer now and also in future, then GREEDY/TWO POINTER
 		//ELSE, DP. best decision for future.
-		//P0, just find maxsum with 1 element from 1 array at any index.
 //		int a[]= {10,40,70},n=a.length; //actual way of taking i/p.
 //		int b[]= {20,50,80};
 //		int c[]= {30,60,90};
