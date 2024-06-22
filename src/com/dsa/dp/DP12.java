@@ -1,11 +1,11 @@
 package com.dsa.dp;
 
-public class DP11 {
+public class DP12 {
 	public static void main(String as[])
 	{
 //		BEGIN FROM FIRST INDEX AND NEED TO REACH TO THE LAST INDEX.
 //		can have jump of 1 or 2.
-//		FIND NO OF JOURNEYS HAVIN SUM AS ODD AND AS EVEN. 
+//		FIND NO OF JOURNEYS HAVIN SUM AS . 
 //		1 BASED INDEXING
 		int a[]={0,2,3,5,8,10},n=a.length;
 		int dp[][]=new int[n][3]; //1 odd 2 even
