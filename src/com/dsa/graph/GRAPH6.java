@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class GRAPH6{
 	public static void main(String as[])
 	{//BFS ALGO
-//		FIND NO OF SHORTEST PATHS NODE 1 to i.
+//		FIND NO OF SHORTEST PATHS NODE 1 to i. WAYS TO REACH FROM 1 to i.
 		Scanner sc=new Scanner(System.in);
 		System.out.println("NODES\tEDGES");
 		int n=sc.nextInt(),e=sc.nextInt();
@@ -25,30 +25,26 @@ public class GRAPH6{
 			graph.get(from).add(to);
 			graph.get(to).add(from);
 		}
-//		System.out.println("SOURCE NODE: ");
-//		int source=sc.nextInt();//start node
 		int visited[]=new int[n+5];
 		int ways[]=new int[n+5];
 		ways[1]=1;
 		Queue<Integer> q=new LinkedList<>();
 		q.add(1);
 		int lvl[]=new int[n+5];
-//		System.out.println("\nNODE\tLEVEL");
 		while(!q.isEmpty())
 		{
 			int node=q.remove();
-			//System.out.println(node+"\t"+lvl[node]);
 			for(int i=1;i<graph.get(node).size();i++)
 			{
 				int connected=graph.get(node).get(i); //node connected to our node
-				if(visited[connected]==0) //not traversed
+				if(visited[connected]==0) //not traversed. WE WILL ALWAYS GET LEAST/BEST LEVEL HERE
 				{
 					q.add(connected); //add to queue
 					ways[connected]=ways[node];
 					visited[connected]=1; //now traversed
 					lvl[connected]=lvl[node]+1; //.
 				}
-				else
+				else // SOME OTHER PATH ALSO NEEDS T BE CONSIDERED FOR THE CONNECTED NODE.
 				{
 					if(lvl[node]+1==lvl[connected]) //.
 					{
