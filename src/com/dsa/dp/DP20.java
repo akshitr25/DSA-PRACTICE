@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class DP20 {
 	public static void main(String as[])
-	{
-			System.out.println("MAX ENERGY POSSIBLE = "+dpmax[n]);
+	{//S-14
+			System.out.println();
 	}
 }
