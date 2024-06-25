@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class GRAPH1 {
 	public static void main(String as[])
-	{//matrix, if n less and e too many (dense graph)
+	{//ADJACENCY MATRIX, if n less and e too many (dense graph)
 		int graph[][]=new int[10000][10000];
 		int n,e;
 		Scanner sc=new Scanner(System.in);
