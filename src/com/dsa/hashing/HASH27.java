@@ -7,7 +7,7 @@ public class HASH27 {
 	public static void main(String as[])
 	{// hash 24
 //		Given an array arr[] of size N and an integer S, the task is to find the count of quadruplets present in the given array having sum S. 
-//		BF TC N^4, SC 1
+//		OPTIMAL TC N^2, SC N
 		int a[]={4,5,3,1,2,4},n=a.length,target=13;
 //		int a[]= {1,5,3,1,2,10},target=20,n=a.length;
 		int count=0,ans=0;
