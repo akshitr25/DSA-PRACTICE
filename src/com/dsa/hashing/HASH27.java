@@ -8,26 +8,33 @@ public class HASH27 {
 	{// hash 24
 //		Given an array arr[] of size N and an integer S, the task is to find the count of quadruplets present in the given array having sum S. 
 //		BF TC N^4, SC 1
-//		int a[]={4, 5, 3, 1, 2, 4},n=a.length,target=13;
-		int a[]= {1,5,3,1,2,10},target=20,n=a.length;
-		int count=0;
-		Map<Integer,Integer> map1=new HashMap<>();
-		for(int i=0;i<n;i++)
+		int a[]={4,5,3,1,2,4},n=a.length,target=13;
+//		int a[]= {1,5,3,1,2,10},target=20,n=a.length;
+		int count=0,ans=0;
+//		Map<Integer,Integer> map1=new HashMap<>();
+		int i,j,k,l;
+		for(i=0;i<n-1;i++)
 		{
-			for(int j=i+1;j<n;j++)
+			for(j=i+1;j<n-2;j++)
 			{
-				int val=a[i]+a[j];
-				map1.put(val,map1.getOrDefault(val,0)+1);
-			}
-		}
-		for(int k=0;k<n;k++)
-		{
-			for(int l=k+1;l<n;l++)
-			{
-				int val=0;
-				val=target-(a[k]+a[l]);
-				if(map1.containsKey(val))
-					count+=map1.get(val);
+				int req=target-a[i]-a[j];
+				Map<Integer,Integer> map=new HashMap<>();
+				for(k=j+1;k<n;k++)
+				{
+					if(map.containsKey(a[k]))
+						map.put(a[k],map.get(a[k])+1);
+					else
+						map.put(a[k],1);
+				}
+				int count2x=0;
+				for(k=j+1;k<n;k++)
+				{
+					if(map.containsKey(req-a[k]))
+						count2x+=map.get(req-a[k]);
+					if(req-a[k]==a[k])	
+						count2x--;
+				}
+				count+=count2x/2;
 			}
 		}
 		System.out.println(count);
