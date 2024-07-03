@@ -1,0 +1,13 @@
+IMPORTANT
+modulo
+
+x%y = [0...y-1]
+
+formulae
+	(a+b)%k=(a%k+b%k)%k
+		(5+10)%2=(1+0)%2=1
+	(a*b)%k=(a%k*b%k)%k
+	if(x<y)	x<y=x
+	infinity:
+		x%y=[0...y-1]=>%y=[0...y-1]
+	(a-b)%k=(a%k+b%k+k)%k (-ve modulo not directly calculated by compiler, so +k is to make sure modulo is always of +ve val)
