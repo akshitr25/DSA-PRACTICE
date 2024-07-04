@@ -54,8 +54,5 @@ public class DP23 {
 		}
 		System.out.println("ODD SUM JOURNEYS: "+(dp[n-1][0][1]+dp[n-1][1][1]));
 		System.out.println("EVEN SUM JOURNEYS: "+(dp[n-1][0][0]+dp[n-1][1][0]));
-//		WRONG ANS BELOW:
-//		System.out.println("ODD SUM JOURNEYS: "+Math.max(dp[n-1][0][1],dp[n-1][1][1]));
-//		System.out.println("EVEN SUM JOURNEYS: "+Math.max(dp[n-1][0][0],dp[n-1][1][0]));
 	}
 }
