@@ -2,16 +2,15 @@ package com.dsa.dp;
 
 import java.util.Scanner;
 
-public class DP20 {
+public class DP22 {
 	public static void main(String as[])
-	{//S-14
+	{//S-14 FOLLOW UP
 //		You work as a consultant and have clients in cityA and cityB. On a given day,
 //		say i, you can either
 //		work in cityA and make Ai dollars or you can work in cityB and make Bi dollars. 
 //		You can also spend the day traveling between cityA and cityB in which case your earnings that day are 0.
 //		FIND MAX EARNING
 //		a and b never consecutive.
-//		TC N, SC N
 		int a[]={1,2,3,4,4},b[]={1,2,3,4,4},n=a.length;
 //		23,4,5,101 | 21,1,10,100
 		int dp[][]=new int[n+1][2];
