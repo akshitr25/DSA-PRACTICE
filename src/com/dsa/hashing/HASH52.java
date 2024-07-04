@@ -18,7 +18,7 @@ public class HASH52 {
 		for(int i=0;i<n;i++)
 		{
 			int val=k-a[i]%k;
-			if(map.containsKey(val %k)) //can also do Math.abs(val) (mod of -ve will be -ve) 
+			if(map.containsKey(val %k)) //can use val directly.
 			{
 				count+=map.get(val %k);
 			}
