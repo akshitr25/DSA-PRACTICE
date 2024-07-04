@@ -10,7 +10,7 @@ public class DP22 {
 //		work in cityA and make Ai dollars or you can work in cityB and make Bi dollars or you can work in cityB and make Ci dollars
 //		You can also spend the day traveling between cityA and cityB in which case your earnings that day are 0.
 //		FIND MAX EARNING
-//		TC SC 
+//		TC N SC N
 		int a[]={1,2,3,4,4},b[]={1,2,3,4,4},c[]= {3,1,2,100,4},n=a.length;
 //		23,4,5,101 | 21,1,10,100
 		int dp[][]=new int[n+1][3];
