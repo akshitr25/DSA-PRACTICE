@@ -12,8 +12,10 @@ public class DP20 {
 //		FIND MAX EARNING
 //		a and b never consecutive.
 //		TC N, SC N
-		int a[]={1,2,3,4,4},b[]={1,2,3,4,4},n=a.length;
+		int a[]={25,10,15,10,70},b[]={5,5,50,5,30},n=a.length;
 //		23,4,5,101 | 21,1,10,100
+//		25,10,15,10,70 | 5,5,0,5,30
+//		1,2,3,4,4 | 1,2,3,4,4
 		int dp[][]=new int[n+1][2];
 		dp[0][0]=a[0];//A
 		dp[0][1]=b[0];//B
