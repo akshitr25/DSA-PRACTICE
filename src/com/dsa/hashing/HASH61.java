@@ -8,7 +8,7 @@ public class HASH61 {
 	public static void main(String as[])
 	{// hash 42!
 //		Find the number of nice subarrays
-//		A continuous subarray is called nice if there are k odd numbers on it.
+//		A continuous subarray is called nice if there are k odd numbers in it.
 //		TC N, SC N
 		int a[]={1,1,2,1,1},k=3,n=a.length,ans=0,count=0;
 //		8,2,1,3,4,5,1,10 | 3
