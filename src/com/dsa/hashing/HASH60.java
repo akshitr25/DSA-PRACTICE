@@ -8,7 +8,7 @@ public class HASH60 {
 	public static void main(String as[])
 	{// hash 42!
 //		Find the number of subarrays such that their maximum is K
-//		Optimal TC N^2, SC 1
+//		Optimal TC N^2?, SC 1
 //		HOW TO DO WITH STACK?
 		int a[]={8,2,1,3,4,5,1,10},k=3,n=a.length,count=0;
 //		8,2,1,3,4,5,1,10 | 3
