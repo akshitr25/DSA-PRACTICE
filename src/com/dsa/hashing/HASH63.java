@@ -30,13 +30,13 @@ public class HASH63 {
 		String month="";
 		String year="";
 		String s1[]=s.split(" ");
-		if(s1[0].length()>3) //11
+		if(s1[0].length()>3) //11th
 		{
 			day=s1[0].substring(0,2);
 			month=map.get(s1[1]);//s.substring(0)
 			year=s1[2];
 		}
-		else //1
+		else //1st
 		{
 			day="0"+s1[0].substring(0,1);
 			month=map.get(s1[1]);
