@@ -6,11 +6,8 @@ public class DP24 { //????? TOUGH
 	public static void main(String as[])
 	{//S-15
 //		-> There are two arrays , 'B' and 'C' ; size of both the arrays is 'N' ;
-//
 //		-> At each index you are supposed to pick up an element either from array 'C' or array 'B'
-//
 //		->You have to maximize the final sum of all elements
-//
 //		->Condition : You cannot select 3 or more than 3 element consecutively from the same array.
 		int b[]={0,5,3,4},c[]={0,10,10,10},n=b.length-1; //1 based indexing
 		int bcount=0,ccount=0;
