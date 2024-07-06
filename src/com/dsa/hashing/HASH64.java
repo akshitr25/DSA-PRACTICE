@@ -12,34 +12,30 @@ public class HASH64 {
 //		The 2D array should contain only the elements of the array nums.
 //		Each row in the 2D array contains distinct integers.
 //		The number of rows in the 2D array should be minimal.
-		int a[]={1,3,4,1,2,3,1},n=a.length,max=Integer.MIN_VALUE;
+		int a[]= {1,3,4,1,2,3,1},n=a.length,max=0;
+//		for(int i=0;i<200;i++)
+//			a[i]=200;
+//		1,3,4,1,2,3,1
+		Map<Integer,Integer> map=new HashMap<>();
+		for(int i:a)
+		{
+			map.put(i,map.getOrDefault(i,0)+1);
+			max=Math.max(max,map.get(i));
+		}
 		List<List<Integer>> ans=new ArrayList<>();
+		for(int i=1;i<=max;i++)
+			ans.add(new ArrayList<>());
 		for(int i=0;i<n;i++)
 		{
-			boolean ins=false;
-			for(int j=0;j<ans.size();i++)
+			for(int j=0;j<ans.size();j++)
 			{
-				boolean ch=false;
-				for(int k=0;k<ans.size();k++)
-				{
-					if(a[i]==ans.get(j).get(k))
-						ch=true;
-				}
-				if(!ch)
+				if(!ans.get(j).contains(a[i]))
 				{
 					ans.get(j).add(a[i]);
-					ins=true;
 					break;
 				}
 			}
-			if(!ins)
-			{
-				List<Integer> list=new ArrayList<>();
-				list.add(a[i]);
-				ans.add(list);
-			}
 		}
 		System.out.println(ans);
-		
 	}
 }
