@@ -6,6 +6,7 @@ import java.util.List;
 public class TP1 {
 	public static void main(String as[])
 	{
+		//GIVEN 2 SORTED ARRAYS OF SAME SIZE, FIND PAIR OF NO.S SUCH THAT THEIR SUM<=K AND SUM IS CLOSEST POSSIBLE TO K.
 		int a[] = new int[]{1, 4, 5, 7};
 		int b[] = new int[]{10, 20, 30, 40};
 		int x=31;

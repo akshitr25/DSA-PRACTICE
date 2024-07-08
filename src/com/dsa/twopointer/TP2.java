@@ -1,18 +1,16 @@
 package com.dsa.twopointer;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TP2 {
 	public static void main(String as[])
 	{
+//		GIVEN A SORTED ARRAY (CONTAINING -VE NO.S), RETURN THE ARRAY HAVING THE SORTED SQUARED ARRAY (BUT WITHOUT ACTUALLY USING SORT)
 		int a[] = new int[]{-10,-4,1,2,10};
 		int ans[]=new int[a.length];
 		int idx=0;
 		int p=a.length-1;
 		for(int i=0;i<a.length;i++)
 		{
-			if(a[i]>=0)
+			if(a[i]>=0) //find last -ve element index
 			{
 				p=i-1;
 				break;
