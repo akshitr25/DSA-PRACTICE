@@ -1,0 +1,4 @@
+subarray dp
+dp[i][j]=best answer from index i to j (range i to j)
+
+https://docs.google.com/document/d/1znpijoxGciubIEHE-SdHtM51FZMizAs94AjJfnVo-oY/edit

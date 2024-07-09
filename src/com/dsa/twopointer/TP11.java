@@ -6,7 +6,7 @@ public class TP11 {
 //		Good Index meaning - When you remove this index :- array B becomes a subsequence of array A
  
 		int a[]={1,2,5,8,8,6,5,4,3},b[]={5,5},na=a.length,nb=b.length;
-		int i=0,j=0;
+		int i=0,j=0,count=0;
 		while(i<na && j<nb)
 		{
 			if(a[i]==b[j])
@@ -17,10 +17,9 @@ public class TP11 {
 			else
 			{
 				i++;
+				count++;
 			}
 		}
-		if(j==nb)
-			System.out.println(true);
-		else	System.out.println(false);
+		System.out.println(count);
 	}
 }
