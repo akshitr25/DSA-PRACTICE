@@ -7,7 +7,7 @@ public class TP13 {
 	public static void main(String as[])
 	{//TP 8
 //		Find the smallest subarray which has all the numbers coming in it from L to R at least one time; other numbers are also allowed to come but the fixed condition is that all numbers from L to R should be coming at least one time.
-//		Optimal TC N^2,SC R-L+1
+//		Optimal TC N+N,SC R-L+1=>R-L=>N
 		int a[]={2,1,4,3,2,1,1,4},l=2,r=4; //8,2,1,2,3,4,5,8 | 2,5 |
 		int n=a.length,minlen=Integer.MAX_VALUE,i=0,j=0;
 		Map<Integer,Integer> map=new HashMap<>();
