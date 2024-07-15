@@ -1,6 +1,7 @@
 package com.dsa.twopointer;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,10 @@ public class TP23 {
 				list.add(map.size());
 			}
 		}
+		Collections.sort(list);
 		System.out.println(list);
+		int size=list.size();
+		System.out.println("SIZE: "+size);
 		System.out.println(list.get(list.size()/2));
 	}
 }
