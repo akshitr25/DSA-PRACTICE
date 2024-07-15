@@ -16,7 +16,7 @@ public class TP23 {
 		for(int i=0;i<n;i++)
 		{
 			Map<Integer,Integer> map=new HashMap<>(); //element, freq. size of map means how many distinct nos in subarray.
-			int j=i;
+			int j;
 			for(j=i;j<n;j++)
 			{
 				map.put(a[j],map.getOrDefault(a[j],0)+1);
