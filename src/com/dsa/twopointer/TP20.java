@@ -3,11 +3,13 @@ package com.dsa.twopointer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TP19 {
+public class TP20 {
 	public static void main(String as[])
 	{//TP 15
-//		P0-> Given an array of numbers ; find the longest subarray which has number g coming for <=k times. (-->k or k-1 or k-2 or k-3 or….1 or 0) 
-//		TC N, SC 1
+//		P1: Given an array of numbers ; find the longest subarray which has number g1 coming for <=k1 times. (-->k1 or k1-1 or k1-2 or k1-3 or….1 or 0) + g2 coming for <=k2 times. + g3 coming for <=k3 times. 
+//		TC N, SC N 
+		//HW
+		//-------------------------
 		int a[]={1,2,3,4,3,5,5,5},g=3,k=1;
 //		int a[]={5,5,6,7,8,8,6,5,5},g=5,k=2; //count=7
 		int n=a.length,maxlen=0;
@@ -27,7 +29,7 @@ public class TP19 {
 				}
 				else
 				{
-					maxlen=Math.max(maxlen,1); //as i=j so len will be 1, comapre it to maxlen.
+					maxlen=Math.max(maxlen,1); //as i=j so len will be 1, compare it to maxlen.
 					j++;
 					if(j<n)
 					{
@@ -36,7 +38,7 @@ public class TP19 {
 					}
 				}
 			}
-			else //if(count>k
+			else //if(i!=j) i<j
 			{
 				if(count>k)
 				{
