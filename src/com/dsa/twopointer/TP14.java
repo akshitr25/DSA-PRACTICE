@@ -8,8 +8,9 @@ public class TP14 {
 	{//TP 11
 //		Longest subarray having sum of elements atmost K
 //		TC N, SC 1 
-		int a[]={8,2,4,0,1,1,0},k=9;
+		int a[]={1,2,3,4,5},k=5;
 		//1,2,1,0,1,1,0 | 4 | ans=5
+		//8,2,4,0,1,1,0 | 9 | ans=6
 		int n=a.length,maxlen=-1,i=0,j=0,sum=0;
 		while(j<n)
 		{
