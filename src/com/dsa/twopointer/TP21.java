@@ -9,7 +9,7 @@ public class TP21 {
 	{//TP 16
 //		GIVEN 2 ARRAYS, FIND MAX NO OF PAIRS THAT CAN BE FORMED WHERE a[i]>b[j]
 //		EACH ELEMENT CAN NOT BE IN MORE THAN 1 PAIR!
-//		TC NlogN + NlogN + N, SC O(y)/O(n+k)? (complexity increases as internal space needed for sorting)
+//		TC NlogN + NlogN + N=> NlogN, SC O(y)/O(n+k)? (complexity increases as internal space needed for sorting)
 		int a[]={1,2,3};//1 2 3
 		int b[]={1,2,1};//1 1 2 | so 3,1 2,1
 		Arrays.sort(a);
