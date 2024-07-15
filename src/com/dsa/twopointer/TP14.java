@@ -7,7 +7,7 @@ public class TP14 {
 	public static void main(String as[])
 	{//TP 11
 //		Longest subarray having sum of elements atmost K
-//		TC , SC 
+//		TC N, SC 1 
 		int a[]={8,2,4,0,1,1,0},k=9;
 		//1,2,1,0,1,1,0 | 4 | ans=5
 		int n=a.length,maxlen=-1,i=0,j=0,sum=0;
