@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class TP17 {
 	public static void main(String as[])
-	{//TP 13
+	{//TP 14
 //		Given an array A[] of N integers and a range(L, R). The task is to find the number of subarrays having sum in the range L to R (inclusive).
 //		TC N, SC 1 
 		int a[]={2,3,5,8},l=4,r=13; //ans=6
