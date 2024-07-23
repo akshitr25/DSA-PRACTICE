@@ -2,55 +2,61 @@ package com.dsa.hashing;
 
 public class HASH74 {
 	public static void main(String as[])
-	{// hash 53!
-//		GIVEN AN ARRAY, FIND NO OF TUPLES (i,j,k,l,m) such a[i]<a[j] >a[k]< a[l]>a[m] 
-//		OPTIMAL TC 3*(N^2), SC 2*(N)  
-		int a[]={1,2,1,2,1,0},n=a.length,ans=0;
-//		1 2 1 2 1 | 1 2 1 2 0
-//		count no of a[i]<a[j]
-//		p[j]=no of such pairs
-		int p[]=new int[n];
-//		for a[i]<a[j]
-		for(int j=0;j<n;j++)
+	{// hash 54
+//		We will give you a string only consisting of “a” and “b” ; now convert it to a string such that there is no subset like “bab” or “aba” ; do this in minimum cost. 
+//Cost : 1 for flipping a into b or b into a. 
+//		TC 3*N=>N, SC 4*N=>N
+		String s="babbababababbabb"; //bbbaaaaab | aaabbbba
+//		abbaabaab->
+//		abbbbbbbb => 4
+		int n=s.length();
+		int prefa[]=new int[n];
+		int prefb[]=new int[n];
+		if(s.charAt(0)=='b')
+			prefa[0]=1;
+		else if(s.charAt(0)=='a')
+			prefb[0]=1;
+		for(int i=1;i<n;i++)
 		{
-			for(int i=j-1;i>=0;i--)
+			if(s.charAt(i)=='b')
 			{
-				if(a[i]<a[j])
-				{
-					p[j]++;
-				}
+				prefa[i]=prefa[i-1]+1;
+				prefb[i]=prefb[i-1];
+				
+			}
+			else if(s.charAt(i)=='a')
+			{
+				prefa[i]=prefa[i-1];
+				prefb[i]=prefb[i-1]+1;
 			}
 		}
-//		for a[l]>a[m]
-//		count no of a[l]>a[m]
-//		s[l]=no of such pairs
-		int s[]=new int[n];
-		for(int l=n-1;l>=0;l--)
+		int suffb[]=new int[n];
+		int suffa[]=new int[n];
+		if(s.charAt(n-1)=='a')
+			suffb[n-1]=1;
+		else if(s.charAt(n-1)=='b')
+			suffa[n-1]=1;
+		for(int i=n-2;i>=0;i--)
 		{
-			for(int m=l+1;m<n;m++)
+			if(s.charAt(i)=='a')
 			{
-				if(a[l]>a[m])
-					s[l]++;
+				suffb[i]=suffb[i+1]+1;
+				suffa[i]=suffa[i+1];
+			}
+			else if(s.charAt(i)=='b')
+			{
+				suffb[i]=suffb[i+1];
+				suffa[i]=suffa[i+1]+1;
 			}
 		}
-//		.........a[k].........
-//		x*y
-		for(int k=0;k<n;k++)
+		int min=n;
+		for(int i=0;i<n-1;i++)
 		{
-			int left=0;
-			for(int j=0;j<k;j++)
-			{
-				if(a[j]>a[k])
-					left+=p[j];
-			}
-			int right=0;
-			for(int l=k+1;l<n;l++)
-			{
-				if(a[l]>a[k])
-					right+=s[l];
-			}
-			ans+=left*right;
+			int cost1=prefa[i]+suffb[i+1];
+			int cost2=prefb[i]+suffa[i+1];
+			int cost=Math.min(cost1,cost2);
+			min=Math.min(min,cost);
 		}
-		System.out.println(ans);
+		System.out.println(min);
 	}
 }
