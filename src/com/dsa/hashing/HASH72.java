@@ -2,7 +2,7 @@ package com.dsa.hashing;
 
 public class HASH72 {
 	public static void main(String as[])
-	{// hash 52!
+	{// hash 53!
 //		GIVEN AN ARRAY, FIND NO OF TUPLES (i,j,k,l,m) such a[i]<a[j]>a[k]<a[l]>a[m] 
 //		BF TC N^5, SC 1 
 		int a[]={1,2,1,2,1,0},n=a.length,count=0;
