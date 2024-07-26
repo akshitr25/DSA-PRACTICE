@@ -5,18 +5,16 @@ import java.util.Scanner;
 public class DP34 { 
 	public static void main(String as[])
 	{
-//		S-23 10 JULY OA CHALLENGE
-//		Given a string s, return the longest palindromic substring in it.
-//A string is a palindrome when it reads the same backward as forward.
-//A substring is a contiguous sequence of characters within the string.
-//		BETTER TC N+N+N^2=>N^2, SC N^2
-		String s="abbaxyz";
-		int n=s.length(),max=0;
+//		S-25 10 JULY OA CHALLENGE
+//		Find whether a palindromic subsequence of length >=k exists in a string.
+//		TC , SC
+//		here dp[i][j]=no of subsequences such that they are in i..j and a palindrome.
+		String s="bbbbbbbbb"; //abbaxyz
+		int n=s.length();
 		int dp[][]=new int[n][n];
 		for(int i=0;i<n;i++) //len 1
 		{
 			dp[i][i]=1;
-			max=1;
 		}
 		for(int i=0;i<n-1;i++) //len 2
 		{
@@ -24,8 +22,11 @@ public class DP34 {
 			char c2=s.charAt(i+1);
 			if(c1==c2)
 			{
-				dp[i][i+1]=1;
-				max=2;
+				dp[i][i+1]=3;
+			}
+			else
+			{
+				dp[i][i+1]=2;
 			}
 		}
 		//......
@@ -35,18 +36,21 @@ public class DP34 {
 			i=0;
 			while(i<n-len+1)
 			{
-				char c1=s.charAt(i);
+				char ci=s.charAt(i);
 				int j=i+len-1;
-				char c2=s.charAt(j);
-				if(c1==c2 && dp[i+1][j-1]==1)
+				char cj=s.charAt(j);
+				if(ci!=cj)
 				{
-					dp[i][j]=1;
-					max=len; //j-i+1
+					dp[i][j]=dp[i][j-1]+dp[i+1][j]-dp[i+1][j-1];
+				}
+				else
+				{
+					dp[i][j]=1+dp[i][j-1]+dp[i+1][j];
 				}
 				i++;
 			}
 			len++;
 		}
-		System.out.println(max);
+		System.out.println(dp[0][n-1]);
 	}
 }

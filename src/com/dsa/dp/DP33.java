@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DP33 { 
 	public static void main(String as[])
 	{
-//		S-23 10 JULY OA CHALLENGE
+//		S-24 10 JULY OA CHALLENGE
 //		Given a string s, return the length of longest palindromic substring in it.
 //A string is a palindrome when it reads the same backward as forward.
 //A substring is a contiguous sequence of characters within the string.
