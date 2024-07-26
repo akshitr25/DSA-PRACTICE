@@ -2,21 +2,21 @@ package com.dsa.dp;
 
 import java.util.Scanner;
 
-public class DP32 { 
+public class DP33 { 
 	public static void main(String as[])
 	{
 //		S-23 10 JULY OA CHALLENGE
-//		Given a string s, return the number of palindromic substrings in it.
+//		Given a string s, return the length of longest palindromic substring in it.
 //A string is a palindrome when it reads the same backward as forward.
 //A substring is a contiguous sequence of characters within the string.
 //		BETTER TC N+N+N^2=>N^2, SC N^2
 		String s="abbaxyz";
-		int n=s.length(),count=0;
+		int n=s.length(),max=0;
 		int dp[][]=new int[n][n];
 		for(int i=0;i<n;i++) //len 1
 		{
 			dp[i][i]=1;
-			count++;
+			max=1;
 		}
 		for(int i=0;i<n-1;i++) //len 2
 		{
@@ -25,7 +25,7 @@ public class DP32 {
 			if(c1==c2)
 			{
 				dp[i][i+1]=1;
-				count++;
+				max=2;
 			}
 		}
 		//......
@@ -41,12 +41,12 @@ public class DP32 {
 				if(c1==c2 && dp[i+1][j-1]==1)
 				{
 					dp[i][j]=1;
-					count++;
+					max=len; //j-i+1
 				}
 				i++;
 			}
 			len++;
 		}
-		System.out.println(count);
+		System.out.println(max);
 	}
 }
